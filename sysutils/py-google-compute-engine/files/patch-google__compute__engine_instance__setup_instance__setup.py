@@ -1,4 +1,4 @@
---- google_compute_engine/instance_setup/instance_setup.py.orig	2017-08-29 20:17:21 UTC
+--- google_compute_engine/instance_setup/instance_setup.py.orig	2017-09-14 18:08:49 UTC
 +++ google_compute_engine/instance_setup/instance_setup.py
 @@ -146,12 +146,12 @@ class InstanceSetup(object):
      # Instance setup systemd scripts block sshd from starting.

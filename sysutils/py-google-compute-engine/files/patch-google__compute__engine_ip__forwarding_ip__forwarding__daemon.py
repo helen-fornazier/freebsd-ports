@@ -1,4 +1,4 @@
---- google_compute_engine/ip_forwarding/ip_forwarding_daemon.py.orig	2017-08-29 20:17:21 UTC
+--- google_compute_engine/ip_forwarding/ip_forwarding_daemon.py.orig	2017-09-14 18:08:49 UTC
 +++ google_compute_engine/ip_forwarding/ip_forwarding_daemon.py
 @@ -137,20 +137,20 @@ class IpForwardingDaemon(object):
      Args:

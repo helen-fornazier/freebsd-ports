@@ -1,4 +1,4 @@
---- google_compute_engine/instance_setup/instance_config.py.orig	2017-09-03 13:43:33 UTC
+--- google_compute_engine/instance_setup/instance_config.py.orig	2017-09-29 00:21:28 UTC
 +++ google_compute_engine/instance_setup/instance_config.py
 @@ -72,11 +72,11 @@ class InstanceConfig(config_manager.Conf
            'instance_id': '0',
