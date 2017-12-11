@@ -1,4 +1,4 @@
---- google_compute_engine/clock_skew/clock_skew_daemon.py.orig	2017-09-14 18:08:49 UTC
+--- google_compute_engine/clock_skew/clock_skew_daemon.py.orig	2017-11-29 19:23:20 UTC
 +++ google_compute_engine/clock_skew/clock_skew_daemon.py
 @@ -59,9 +59,12 @@ class ClockSkewDaemon(object):
        response: string, the metadata response with the new drift token value.

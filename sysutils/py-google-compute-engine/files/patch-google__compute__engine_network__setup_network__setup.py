@@ -1,4 +1,4 @@
---- google_compute_engine/network_setup/network_setup.py.orig	2017-09-29 00:21:28 UTC
+--- google_compute_engine/network_setup/network_setup.py.orig	2017-11-29 19:23:20 UTC
 +++ google_compute_engine/network_setup/network_setup.py
 @@ -107,12 +107,18 @@ class NetworkSetup(object):
      self.logger.info('Enabling the Ethernet interfaces %s.', interfaces)

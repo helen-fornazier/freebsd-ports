@@ -1,6 +1,6 @@
---- google_compute_engine/ip_forwarding/ip_forwarding_daemon.py.orig	2017-09-14 18:08:49 UTC
+--- google_compute_engine/ip_forwarding/ip_forwarding_daemon.py.orig	2017-11-29 19:23:20 UTC
 +++ google_compute_engine/ip_forwarding/ip_forwarding_daemon.py
-@@ -137,20 +137,20 @@ class IpForwardingDaemon(object):
+@@ -136,20 +136,20 @@ class IpForwardingDaemon(object):
      Args:
        result: dict, the metadata response with the new network interfaces.
      """
