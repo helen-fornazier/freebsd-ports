@@ -22,6 +22,7 @@ GH_TAGNAME=	20171213
 USES=		gmake shebangfix
 MAKE_ARGS=	JSON_INCLUDE_PATH=${LOCALBASE}/include/json-c \
 		BIN_INSTALL_PATH=/bin \
+		PAM_INSTALL_PATH=/lib \
 		AUTHKEYS_INSTALL_PATH=/bin
 
 USE_GCC=	yes
