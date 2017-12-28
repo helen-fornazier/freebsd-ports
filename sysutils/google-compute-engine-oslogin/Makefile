@@ -19,7 +19,7 @@ GH_ACCOUNT=	GoogleCloudPlatform
 GH_PROJECT=	compute-image-packages
 GH_TAGNAME=	20171213
 
-USES=		gmake shebangfix
+USES=		gmake
 MAKE_ARGS=	JSON_INCLUDE_PATH=${LOCALBASE}/include/json-c \
 		BIN_INSTALL_PATH=/bin \
 		PAM_INSTALL_PATH=/lib \
