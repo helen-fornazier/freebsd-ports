@@ -13,7 +13,8 @@ LICENSE_FILE=	${WRKSRC}/../LICENSE
 
 LIB_DEPENDS=	libcurl.so:ftp/curl \
 		libjson-c.so:devel/json-c
-RUN_DEPENDS=	gsed:textproc/gsed
+RUN_DEPENDS=	gsed:textproc/gsed \
+		${LOCALBASE}/lib/pam_mkhomedir.so:security/pam_mkhomedir
 
 USE_GITHUB=	yes
 GH_ACCOUNT=	GoogleCloudPlatform
