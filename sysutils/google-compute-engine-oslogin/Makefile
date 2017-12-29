@@ -32,4 +32,7 @@ WRKSRC_SUBDIR=	google_compute_engine_oslogin
 
 SHEBANG_FILES=	bin/google_oslogin_control
 
+post-patch:
+		@${REINPLACE_CMD} -e 's|/etc/sudoers.d|${PREFIX}/etc/sudoers.d|g' ${WRKSRC}/bin/google_oslogin_control
+
 .include <bsd.port.mk>
