@@ -1,4 +1,4 @@
---- bin/google_oslogin_control.orig	2017-12-29 22:06:05 UTC
+--- bin/google_oslogin_control.orig	2017-12-13 23:47:59 UTC
 +++ bin/google_oslogin_control
 @@ -65,29 +65,29 @@ overwrite_file() {
  
