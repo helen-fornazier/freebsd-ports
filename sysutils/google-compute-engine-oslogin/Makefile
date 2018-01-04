@@ -22,10 +22,12 @@ GH_PROJECT=	compute-image-packages
 GH_TAGNAME=	20171213
 
 USES=		gmake
+USE_LDCONFIG=	yes
 MAKE_ARGS=	JSON_INCLUDE_PATH=${LOCALBASE}/include/json-c \
 		BIN_INSTALL_PATH=/bin \
 		PAM_INSTALL_PATH=/lib \
-		AUTHKEYS_INSTALL_PATH=/bin
+		AUTHKEYS_INSTALL_PATH=/bin \
+		NSS_LIBRARY_SONAME=nss_nssoslogin.so.2
 
 USE_GCC=	yes
 
@@ -36,5 +38,8 @@ SHEBANG_FILES=	bin/google_oslogin_control
 post-patch:
 		@${REINPLACE_CMD} -e 's|/etc/sudoers.d|${PREFIX}/etc/sudoers.d|g' ${WRKSRC}/bin/google_oslogin_control
 		@${REINPLACE_CMD} -e 's|/usr/bin|${PREFIX}/bin|g' ${WRKSRC}/bin/google_oslogin_control
+
+post-install:
+		ln -sf libnss_${PORTNAME}-${PORTVERSION}.so ${STAGEDIR}${PREFIX}/lib/nss_nssoslogin.so
 
 .include <bsd.port.mk>
