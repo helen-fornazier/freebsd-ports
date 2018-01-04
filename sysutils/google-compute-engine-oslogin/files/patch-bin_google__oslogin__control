@@ -1,6 +1,6 @@
 --- bin/google_oslogin_control.orig	2017-12-13 23:47:59 UTC
 +++ bin/google_oslogin_control
-@@ -65,29 +65,29 @@ overwrite_file() {
+@@ -65,29 +65,31 @@ overwrite_file() {
  
  remove_from_config() {
    config=$1
@@ -25,6 +25,8 @@
    remove_from_nss_config
 -  sed -i '/^passwd:/ s/$/ oslogin/' ${nss_config}.new
 +  gsed -i '/^passwd:/ s/$/ oslogin/' ${nss_config}.new
++  # Replace compat by files (as compat cannot be used with other sources)
++  gsed -i '/^passwd:/ s/compat/files/' ${nss_config}.new
  }
  
  add_to_pam_config() {
@@ -38,7 +40,7 @@
  }
  
  restart_service() {
-@@ -100,7 +100,7 @@ restart_service() {
+@@ -100,7 +102,7 @@ restart_service() {
      fi
    fi
    if which service > /dev/null 2>&1; then
