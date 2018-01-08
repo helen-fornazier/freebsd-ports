@@ -40,5 +40,9 @@ post-patch:
 
 post-install:
 		${LN} -sf libnss_${PORTNAME}-${PORTVERSION}.so ${STAGEDIR}${PREFIX}/lib/nss_oslogin.so.1
+		${STRIP_CMD} ${STAGEDIR}${PREFIX}/bin/google_authorized_keys
+		${STRIP_CMD} ${STAGEDIR}${PREFIX}/lib/libnss_google-compute-engine-oslogin-1.1.2.so
+		${STRIP_CMD} ${STAGEDIR}${PREFIX}/lib/pam_oslogin_admin.so
+		${STRIP_CMD} ${STAGEDIR}${PREFIX}/lib/pam_oslogin_login.so
 
 .include <bsd.port.mk>
