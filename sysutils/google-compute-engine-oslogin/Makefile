@@ -39,6 +39,6 @@ post-patch:
 		@${REINPLACE_CMD} -e 's|/usr/bin|${PREFIX}/bin|g' ${WRKSRC}/bin/google_oslogin_control
 
 post-install:
-		ln -sf libnss_${PORTNAME}-${PORTVERSION}.so ${STAGEDIR}${PREFIX}/lib/nss_oslogin.so.1
+		${LN} -sf libnss_${PORTNAME}-${PORTVERSION}.so ${STAGEDIR}${PREFIX}/lib/nss_oslogin.so.1
 
 .include <bsd.port.mk>
