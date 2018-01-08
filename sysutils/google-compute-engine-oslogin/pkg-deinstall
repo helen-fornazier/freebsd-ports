@@ -1,0 +1,12 @@
+#!/bin/sh
+
+if [ "$2" = "DEINSTALL" ]; then
+	if [ -x ${PKG_PREFIX}/bin/google_oslogin_control ]; then
+		${PKG_PREFIX}/bin/google_oslogin_control status
+		if [ $? -eq 0 ]; then
+			${PKG_PREFIX}/bin/google_oslogin_control deactivate 2>/dev/null
+		fi
+	else
+		echo "Could not find google_oslogin_control. Please run it manually to deactivate"
+	fi
+fi
